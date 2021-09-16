@@ -4,13 +4,6 @@ Demonstrates how to use the screen_lock_check plugin.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Run `flutter pub get` to install dependencies, and then `flutter run` to run the example app.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The example app only captures the state of the device at the time of build. If you change the lockscreen preferences while the app is running and want to see an updated view, you will need to rebuild the app, or extend the example app to listen for app lifecycle changes. 

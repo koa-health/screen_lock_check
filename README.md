@@ -1,15 +1,10 @@
 # screen_lock_check
 
-A new Flutter project.
+This plugin allows you to check whether the user has some form of screen lock set on their device: a passcode, a pattern, touch ID or face ID.
 
-## Getting Started
+## How it works
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+There is an example app that demonstrates how the plugin can be used. 
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+You just need to instatiate LockScreenCheck and call the method isScreenLockEnabled. Providing the plugin can access the platform, this will return true or false.
 
