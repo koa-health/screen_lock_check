@@ -4,7 +4,6 @@ This plugin allows you to check whether the user has some form of screen lock se
 
 ## How it works
 
-There is an example app that demonstrates how the plugin can be used. 
+There is an example app that demonstrates how the plugin can be used.
 
 You just need to instatiate LockScreenCheck and call the method isScreenLockEnabled. Providing the plugin can access the platform, this will return true or false.
-
