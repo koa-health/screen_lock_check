@@ -18,6 +18,6 @@ void main() {
   });
 
   test('isScreenLockEnabled', () async {
-    expect(await ScreenLockCheck.isScreenLockEnabled, isTrue);
+    expect(await ScreenLockCheck().isScreenLockEnabled, isTrue);
   });
 }

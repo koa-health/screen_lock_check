@@ -1,3 +1,8 @@
+## 1.0.0
+
+- Converted isScreenLockEnabled from static to non-static method.
+- Documentation correction.
+
 ## 0.0.3
 
 - Added pubspec.lock to gitignore

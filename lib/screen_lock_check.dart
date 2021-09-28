@@ -9,14 +9,12 @@ import 'package:flutter/services.dart';
 /// This can help you to establish how secure the device is.
 
 class ScreenLockCheck {
-  static const MethodChannel _channel =
-      const MethodChannel('screen_lock_check');
+  static const MethodChannel _channel = const MethodChannel('screen_lock_check');
 
   /// Returns [true] if the user has some form of screen lock (lock screen)
   /// enabled on their device
-  static Future<bool> get isScreenLockEnabled async {
-    final bool isScreenLockEnabled =
-        await _channel.invokeMethod('isScreenLockEnabled');
+  Future<bool> get isScreenLockEnabled async {
+    final bool isScreenLockEnabled = await _channel.invokeMethod('isScreenLockEnabled');
     return isScreenLockEnabled;
   }
 }

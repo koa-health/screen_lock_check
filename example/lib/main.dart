@@ -26,7 +26,7 @@ class _MyAppState extends State<MyApp> {
     bool isScreenLockEnabled;
 
     try {
-      isScreenLockEnabled = await ScreenLockCheck.isScreenLockEnabled;
+      isScreenLockEnabled = await ScreenLockCheck().isScreenLockEnabled;
     } catch (e) {
       print('Error checking screen lock enabled: $e');
     }
