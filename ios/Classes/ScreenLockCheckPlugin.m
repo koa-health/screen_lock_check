@@ -16,7 +16,9 @@
    NSError *error;
    BOOL isLockScreenEnabled = [context canEvaluatePolicy:LAPolicyDeviceOwnerAuthentication error:&error];
    if (error != nil) {
-     result([FlutterError errorWithCode: @“UNAVAILABLE” message: @“Local authentication context is unavailable” details: nil]);
+       result([FlutterError errorWithCode:@"UNAVAILABLE"
+                                  message:@"Local authentication context is unavailable"
+                                  details:nil]);
    } else if (isLockScreenEnabled) {
      result([NSNumber numberWithBool:YES]);
    } else {
