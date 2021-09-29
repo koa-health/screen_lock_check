@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - screen_lock_check (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - screen_lock_check (from `.symlinks/plugins/screen_lock_check/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  screen_lock_check:
+    :path: ".symlinks/plugins/screen_lock_check/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  screen_lock_check: e268490743692f2a56e254d1d1026aed38cdf3b0
+
+PODFILE CHECKSUM: 8e679eca47255a8ca8067c4c67aab20e64cb974d
+
+COCOAPODS: 1.11.2
