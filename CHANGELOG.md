@@ -1,3 +1,7 @@
+## 1.1.0
+
+- Fixed bug with ios minimum versioning
+
 ## 1.0.0
 
 - Converted isScreenLockEnabled from static to non-static method.
