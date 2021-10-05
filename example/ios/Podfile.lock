@@ -1,6 +1,6 @@
 PODS:
   - Flutter (1.0.0)
-  - screen_lock_check (0.0.1):
+  - screen_lock_check (1.0.0):
     - Flutter
 
 DEPENDENCIES:
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
-  screen_lock_check: e268490743692f2a56e254d1d1026aed38cdf3b0
+  screen_lock_check: 7b72ba4920c1b92501fe66cb6132f6779cea06ae
 
 PODFILE CHECKSUM: 8e679eca47255a8ca8067c4c67aab20e64cb974d
 

@@ -40,15 +40,58 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Plugin example app'),
-        ),
-        body: Center(
-          child: Text('Is screen lock enabled?: $_isScreenLockEnabled\n'),
+    return AppLifecycleEventHandler(
+      setIsScreenLockEnabled: (val) {
+        setState(() {
+          _isScreenLockEnabled = val;
+        });
+      },
+      child: MaterialApp(
+        home: Scaffold(
+          appBar: AppBar(
+            title: const Text('Plugin example app'),
+          ),
+          body: Center(
+            child: Text('Is screen lock enabled?: $_isScreenLockEnabled\n'),
+          ),
         ),
       ),
     );
+  }
+}
+
+class AppLifecycleEventHandler extends StatefulWidget {
+  final Widget child;
+  final ValueSetter setIsScreenLockEnabled;
+
+  const AppLifecycleEventHandler({
+    @required this.child,
+    @required this.setIsScreenLockEnabled,
+    Key key,
+  }) : super(key: key);
+
+  @override
+  _AppLifecycleEventHandlerState createState() => _AppLifecycleEventHandlerState();
+}
+
+class _AppLifecycleEventHandlerState extends State<AppLifecycleEventHandler>
+    with WidgetsBindingObserver {
+  @override
+  void initState() {
+    WidgetsBinding.instance.addObserver(this);
+    super.initState();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) async {
+    if (state == AppLifecycleState.resumed) {
+      final isScreenLockEnabled = await ScreenLockCheck().isScreenLockEnabled;
+      widget.setIsScreenLockEnabled(isScreenLockEnabled);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return widget.child;
   }
 }
