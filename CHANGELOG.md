@@ -1,3 +1,7 @@
+## 1.2.1
+
+- Refactored ios local authentication check
+
 ## 1.2.0
 
 - Fixed bug with ios no lockscreen case

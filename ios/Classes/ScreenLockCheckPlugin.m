@@ -15,7 +15,7 @@
    LAContext *context = [LAContext new];
    NSError *error;
    BOOL isLockScreenEnabled = [context canEvaluatePolicy:LAPolicyDeviceOwnerAuthentication error:&error];
-      if (error != nil && !([error.domain isEqualToString:@"com.apple.LocalAuthentication"] && error.code == -5)) {
+      if (error != nil && error.code != LAErrorPasscodeNotSet) {
        result([FlutterError errorWithCode:@"UNAVAILABLE"
                                   message:@"Local authentication context is unavailable"
                                   details:error.localizedDescription]);
