@@ -1,3 +1,8 @@
+## 1.2.0
+
+- Fixed bug with ios no lockscreen case
+- Added listener for app resume event in example app to update view
+
 ## 1.1.0
 
 - Fixed bug with ios minimum versioning
