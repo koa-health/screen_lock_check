@@ -1,3 +1,7 @@
+## 1.2.2
+
+- Updated workflow
+
 ## 1.2.1
 
 - Refactored ios local authentication check

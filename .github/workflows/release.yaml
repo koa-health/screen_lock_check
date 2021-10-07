@@ -19,4 +19,3 @@ jobs:
           refreshToken: ${{ secrets.OAUTH_REFRESH_TOKEN }}
           skipTests: true
           flutter: plugin
-          dryRunOnly: true
