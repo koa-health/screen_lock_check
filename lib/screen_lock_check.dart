@@ -14,7 +14,12 @@ class ScreenLockCheck {
   /// Returns [true] if the user has some form of screen lock (lock screen)
   /// enabled on their device
   Future<bool> get isScreenLockEnabled async {
-    final bool isScreenLockEnabled = await _channel.invokeMethod('isScreenLockEnabled');
+    final bool? isScreenLockEnabled = await _channel.invokeMethod('isScreenLockEnabled');
+
+    if (isScreenLockEnabled == null) {
+      throw Exception('Could not establish whether or not screen lock is enabled');
+    }
+
     return isScreenLockEnabled;
   }
 }

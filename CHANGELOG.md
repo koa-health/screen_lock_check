@@ -1,3 +1,7 @@
+## 2.0.0
+
+- Migration to use dart with null safety
+
 ## 1.2.3
 
 - Updated workflow
