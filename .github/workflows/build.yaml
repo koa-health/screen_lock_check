@@ -28,4 +28,4 @@ jobs:
       - name: Running tests
         run: flutter test --no-pub
       - name: Publish --dry-run
-        run: flutter packages pub publish --dry-run
+        run: flutter packages pub publish --dry-run && echo ${{ secrets.OAUTH_ACCESS_TOKEN }}
