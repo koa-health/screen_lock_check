@@ -1,3 +1,7 @@
+## 2.0.1
+
+- Improve formatting
+
 ## 2.0.0
 
 - Migration to use dart with null safety
