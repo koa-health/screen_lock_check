@@ -71,7 +71,8 @@ class AppLifecycleEventHandler extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _AppLifecycleEventHandlerState createState() => _AppLifecycleEventHandlerState();
+  _AppLifecycleEventHandlerState createState() =>
+      _AppLifecycleEventHandlerState();
 }
 
 class _AppLifecycleEventHandlerState extends State<AppLifecycleEventHandler>
